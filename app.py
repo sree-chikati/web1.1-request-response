@@ -47,6 +47,14 @@ def mad_libs(adjective, noun):
     return f' Is that {adjective} cake for {noun}? They will be super happy!'
 
 
+#REQUIRED 4: MULTIPLY 2 NUMBERS
+@app.route('/multiply/<number1>/<number2>')
+def multiply(number1, number2):
+    if number1.isdigit() and number2.isdigit():
+        ans = int(number1) * int(number2)
+        return f' {number1} times {number2} is {ans}'
+    else:
+        return f'Invalid inputs. Please try again by entering 2 numbers!'
 
 
 if __name__ == '__main__':
