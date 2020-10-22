@@ -38,7 +38,7 @@ def favorite_animal(users_animal): #takes in the variable users_animal
 #REQUIRED 2: YOUR USER'S FAVORITE DESSERT
 @app.route('/dessert/<users_dessert>')
 def fav_dessert(users_dessert):
-    return f'Excellent Choice! {users_dessert} is a great dessert!'
+    return f'How did you know I liked {users_dessert}?'
 
 
 
