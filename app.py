@@ -25,5 +25,16 @@ def dogs_page():
     return "Dogs are adorable!"
 
 
+#TUTORIAL 1: YOUR USER'S FAVORITE ANIMAL
+@app.route('/animal/<users_animal>')
+#indicates the URL of the web page we’ll need to visit. 
+#The angle brackets, < and >, denote a route variable for which the user can type anything at all! 
+#The value of whatever the user types into the URL will be available in a variable called users_animal
+def favorite_animal(users_animal): #takes in the variable users_animal
+    """Display a message to the user that changes based on their favorite animal."""
+    return f'Wow, {users_animal} is my favorite animal, too!' #returns the result
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
