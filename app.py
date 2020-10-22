@@ -35,6 +35,12 @@ def favorite_animal(users_animal): #takes in the variable users_animal
     return f'Wow, {users_animal} is my favorite animal, too!' #returns the result
 
 
+#REQUIRED 2: YOUR USER'S FAVORITE DESSERT
+@app.route('/dessert/<users_dessert>')
+def fav_dessert(users_dessert):
+    return f'Excellent Choice! {users_dessert} is a great dessert!'
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
