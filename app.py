@@ -41,6 +41,13 @@ def fav_dessert(users_dessert):
     return f'How did you know I liked {users_dessert}?'
 
 
+#REQUIRED 3: MAD LIBS
+@app.route('/madlibs/<adjective>/<noun>')
+def mad_libs(adjective, noun):
+    return f' Is that {adjective} cake for {noun}? They will be super happy!'
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
