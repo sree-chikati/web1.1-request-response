@@ -57,5 +57,17 @@ def multiply(number1, number2):
         return f'Invalid inputs. Please try again by entering 2 numbers!'
 
 
+#STRETCH CHALLANGE 1: SAY N TIMES
+@app.route('/sayntimes/<word>/<n>')
+def sayntimes(word, n):
+    if n.isdigit():
+        answer = ""
+        for i in range(int(n)):
+            answer += word + " "
+            print(answer)
+        return answer
+    else:
+         return f'Invalid input. Please try again by entering a word and a number!'
+   
 if __name__ == '__main__':
     app.run(debug=True)
