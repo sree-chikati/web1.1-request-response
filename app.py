@@ -3,6 +3,7 @@
 
 #TUTORIAL 1: HELLO WORLD!
 from flask import Flask #Import the Flask library
+import random #For STRETCH CHALLANGE 4
 
 app = Flask(__name__) #Set up our app variable so that we can start writing routes.
 
@@ -80,16 +81,31 @@ def reverse(word):
         switch = i + switch
     return switch
 
+
 #STRETCH CHALLANGE 3: STRANGE CAPS
 @app.route('/strangecaps/<word>')
 def strangecaps(word):
     new = ''
-    for i, value in enumerate(word):
+    for i, value in enumerate(word): 
+    #For i and value in enumerate( which is a method that adds a counter to word)
         if i % 2 == 0:
+        # if i index in word is divided by 2 and returns a 0 remainder, lowercase the letter in that index
             new += value.lower()
         else:
+        # else when i index in the word is divided by 2 and doesn't return a 0 remainder, uppercase the letter
             new += value.upper()
     return new
+
+
+#STRETCH CHALLANGE 4: DICE GAME
+@app.route('/dicegame')
+def dicegame():
+    diceroll = random.randint(1,6)
+    if diceroll != 6:
+        return f"You rolled a {str(diceroll)}. You lost!"
+    else:
+        return f"You rolled a {str(diceroll)}. You won!"
+
    
 if __name__ == '__main__':
     app.run(debug=True)
