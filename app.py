@@ -52,7 +52,7 @@ def mad_libs(adjective, noun):
 def multiply(number1, number2):
     if number1.isdigit() and number2.isdigit():
         ans = int(number1) * int(number2)
-        return f' {number1} times {number2} is {ans}'
+        return f'{number1} times {number2} is {ans}.'
     else:
         return f'Invalid inputs. Please try again by entering 2 numbers!'
 
@@ -68,6 +68,17 @@ def sayntimes(word, n):
         return answer
     else:
          return f'Invalid input. Please try again by entering a word and a number!'
+    
+
+#STRETCH CHALLANGE 2: REVERSE A STRING
+    #HINT: Use a for loop to loop over each character in the string, 
+    #starting at the end; add each one to a result string as you go.
+@app.route('/reverse/<word>')
+def reverse(word):
+    switch = ""
+    for i in word:
+        switch = i + switch
+    return switch
    
 if __name__ == '__main__':
     app.run(debug=True)

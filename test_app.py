@@ -14,7 +14,6 @@
 ## $ pytest -k 'test_penguins'
 ################################################################################
 
-import pytest
 
 from app import app
 
