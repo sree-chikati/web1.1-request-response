@@ -79,6 +79,17 @@ def reverse(word):
     for i in word:
         switch = i + switch
     return switch
+
+#STRETCH CHALLANGE 3: STRANGE CAPS
+@app.route('/strangecaps/<word>')
+def strangecaps(word):
+    new = ''
+    for i, value in enumerate(word):
+        if i % 2 == 0:
+            new += value.lower()
+        else:
+            new += value.upper()
+    return new
    
 if __name__ == '__main__':
     app.run(debug=True)
