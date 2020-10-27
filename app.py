@@ -16,6 +16,8 @@ def homepage():
 
 
 
+# ------------------------------------------- REQUIRED CHALLANGES ------------------------------------------------
+
 #REQUIRED 1: YOUR FAVORITE ANIMAL
 @app.route('/penguins')
 def penguins_page():
@@ -57,6 +59,9 @@ def multiply(number1, number2):
     else:
         return f'Invalid inputs. Please try again by entering 2 numbers!'
 
+
+
+# ------------------------------------------- STRETCH CHALLANGES --------------------------------------------------
 
 #STRETCH CHALLANGE 1: SAY N TIMES
 @app.route('/sayntimes/<word>/<n>')
